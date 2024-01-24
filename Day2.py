@@ -82,5 +82,152 @@
 # print(X[4]) #요
 # print(len(X)) #5
 
-## 1:10:03 리스트부터!
+## {List - 리스트}
 
+# 대괄호 안에 객체들을 '순서대로' 모아 놓은 객체, 데이터 타입 상관 x
+# 리스트가 리스트를 포함할 수 있다.
+# [0,1,2,3] or [123,'hello',156.0] or [0,[1,2],[3,4,5],['안녕',['하','세요]]]
+# List class 객체를 통해 List class 객체를 만든다.
+
+# X = ['안녕하세요']
+# print(isinstance(X,list)) #X(['안녕하세요'])는 List 인스턴스? #True
+
+# Y = ['안녕하세요']
+# print(type(Y)) #Y는 어떤 클래스로 만들어졌는가? #<class 'list'>
+# print(Y.__class__) #<class 'list'>
+
+# 객체의 '메모리 주소' '하나하나'를 왼쪽=>오른쪽 으로 저장
+# 리스트안에 메모리 주소에 접근 후 값을 갖고옴.
+
+# X = [0,[1,2],[3,4,5],['안녕',['하','세요']]]
+# print(len(X)) #4
+# print(X[3][1][0]) #하
+# X[0] == 0의 메모리 주소
+# X[1] == [1,2]의 메모리 주소
+# X[3] == ['안녕',['하','세요]] 의 메모리 주소
+
+## {Dictionaries - 사전}
+
+# 중괄호 {} 안에 객체들을 랜덤 순서대로 모아 놓은 객체
+# {key1 : value, key2 : value2, key3 : value3}
+# 메모리에 저장될 때는 '랜덤한 순'으로 저장이 됨.
+# {
+#     'age' : 30,
+#     'hobby' : ['최강야구보기','스타크래프트','음악듣기'],
+#     'name' : {'first name': 'Craftsman',
+#               'last name' : 'Mentality'},
+#     0 : '0',
+#     1 : '1'
+# }
+
+# X = {'name' : 'Craftsman Mentality'}
+# print(isinstance(X,dict)) #X는 dict의 객체?
+
+# Y = {'hobby' : ['쉬기','놀기','밥먹기']}
+# print(type(Y)) #Y의 클래스? #<class 'dict'>
+# print(Y.__class__) #<class 'dict'>
+
+# Dictionary 는 '열(sequence)' 가 아니다.
+# 객체들이 Random하게 저장됨.
+# 인덱스로 접근 X, Key로 접근
+
+# X = {
+#     'age' : 30,
+#     'hobby' : ['최강야구보기','스타크래프트','음악듣기'],
+#     'name' : {'first name': 'Craftsman',
+#               'last name' : 'Mentality'},
+#     0 : '0',
+#     1 : '1'
+#     }
+
+# Y = 'hobby'
+
+# print(X[0]) #0
+# print(X['age']) #30
+# print(X['name']) #{'first name': 'Craftsman', 'last name': 'Mentality'}
+# print(X['hobby'][0]) #최강야구보기
+# print(len(X)) #5
+# print(X[Y]) #['최강야구보기', '스타크래프트', '음악듣기']
+
+# Key는 string,numbers,tuples,bool 만 가능
+# Key는 중복되면 안 된다.
+
+## {Dictionaries 작동원리}
+
+# with 'Hash Table'
+# 1. 'key' 에 해당하는 메모리 주소를 저장
+# 2. 'key' 메모리 주소에 접근
+# 3. 해당 값의 value 를 'Hash function' 에 input
+# 4. 해당 value 에 해당하는 '특정 주소'를 output
+# 5. 그 메모리 주소에 value 객체 생성
+
+# 값을 저장할 때
+# key address1 ==> key value ==> hash fucntion(in:value) ==> hash function(out:address2) ==> make instance with address2
+
+# 값을 가져올 때(with 'Hash Table')
+# key address1 ==> kevalue ==> hash table(in:value) ==> hash table(out:address2) ==> access to instance by address2
+
+# Y = 'hobby' , X[Y] 접근
+# Y의 hobby와 X의 hobby의 메모리 주소가 다를 수 있다.
+# 하지만 메모리 주소의 '값'을 hash table에 넣는 것이기 때문에 상관 X
+# 어떤 '객체의 값'을 집어 넣는 것이 중요하다.
+
+## {Tuples - 튜플}
+
+# 괄호 () 안에 객체들을 왼쪽 => 오른쪽으로 모아 놓은 객체
+# (1,2,3,4,5)
+# ([1,2,3],(4,5),{'이름' : '크래프트맨','나이' : 30},'하이 헬로 안녕')
+# 데이터 상관 X
+# 리스트 수정 O , 튜플 수정 X
+# 수정하려면 새로운 튜플 생성해야 함.
+
+# 객체가 1개 -> , 필수
+# X = ('안녕하세요',) 
+# print(isinstance(X,tuple)) #X는 tuple의 객체? #True
+# print(type(X)) #X의 클래스? #<class 'tuple'>
+# print(X.__class__) #X의 클래스? #<class 'tuple'>
+
+# 객체 '메모리 주소' '하나하나' 를 왼쪽 => 오른쪽 저장
+# X = ([1,2,3],(4,5),{'이름' : '크래프트맨','나이' : 30},'하이 헬로')
+# print(X[0]) #[1, 2, 3]
+# print(X[2]['이름']) #크래프트맨
+# print(len(X)) #4
+
+
+## {Sets - 세트}
+
+# 중괄호 {} 안에 객체들을 랜덤 순서대로 모아 놓은 객체
+# {1,2,3,4,5}
+# 객체의 중복 불가
+# 수정 불가
+# Dictionary의 'key' 들만 모아 놓은 개념
+
+# X = {'안녕하세요'}
+# print(isinstance(X,set)) #X는 set의 객체? #True
+# print(type(X)) #X의 클래스? #<class 'set'>
+# print(X.__class__) #X의 클래스? #<class 'set'>
+
+## {None Type}
+
+# 존재하지 않는 값
+# error를 피하기 위해 사용
+
+# X = None
+# print(isinstance(X,None)) #error
+# print(type(X)) #X의 클래스? #<class 'NoneType'>
+# print(X.__class__) #<class 'NoneType'>
+
+## {Mutable vs Immutable} - 수정가능성
+
+# 수정 O : List, Dictionary(key는 수정불가)
+# 수정 X : Numbers, Str, Tuple, Set
+
+## Quiz
+
+# X = [{(1,2,3) : ['크래프트맨 멘탈리티','최고',[100,200]],'취미' : ['최강야구','쉬기','놀기']}]
+
+# 1. 100 가져오기
+# 2. '최강야구' 가져오기
+
+# print(X[0][(1,2,3)][2][0]) #100
+# print(X[0]['취미'][0]) #최강야구
