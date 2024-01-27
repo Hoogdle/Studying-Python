@@ -114,4 +114,96 @@
 # print(S[1:-1:2]) #나라바 1~before-1, 2칸씩 건너뛰기
 # print(S[::2]) #가다마사 all,2칸씩 건너뛰기
 
-# https://youtu.be/j8vXaGMJxQI?t=10858
+## {String 전환}
+
+# '100'+300 #error
+# print(int('100')+300) #400
+# print(int('10a'+300)) #error , only 숫자만
+
+## {String은 수정이 불가능}
+# 수정하려면 새로운 문자열을 만들어야 함
+# == 새로운 객체를 생성
+# S = '가나다라마바사'
+# S[0] = '케' #error
+# S = '케' + S[1:]
+# print(S) #케나다라마바사
+# https://youtu.be/j8vXaGMJxQI?t=11143
+
+# replace()
+# 새로운 instance가 생성됨.
+# S = '가나다라마바사'
+# S = S.replace('가','케') #가 => 케
+# print(S) #케나다라마바사
+# https://youtu.be/j8vXaGMJxQI?t=11327
+
+## {String Method}
+
+# replace(), upper(), lower(), count(), index()...
+# String Method로 새로운 String instance가 만들어짐
+
+# .join()
+# l = ['안녕','내','이름은','크래프트맨','멘탈리티야']
+# s1 = '@'.join(l)
+# print(s1) # 안녕@내@이름은@크래프트맨@멘탈리티야
+          # 리스트의 객체들을 각각 join 이때 ''안에 내용을 넣어줌
+
+# .replace()
+# email1 = 'craftsmanmnetality@gmail.com'
+# email2 = email1.replace('gmail','naver')
+# print(email1) #craftsmanmnetality@gmail.com
+# print(email2) #craftsmanmnetality@naver.com
+
+# .split()
+# 리스트 형태로 나눠짐
+# email1 = 'crfatsmanmnetality@gmail.com'
+# email2 = email1.split('@')
+# print(email1) #crfatsmanmnetality@gmail.com
+# print(email2) #['crfatsmanmnetality', 'gmail.com']
+# email3 = '@'.join(email2)
+# print(email3) #crfatsmanmnetality@gmail.com
+# print(email1 is email3) #False
+# print(email1 == email3) #True
+
+# .format()
+# name = 'rlaxodud7737'
+# symbol = '@'
+# email = 'naver.com'
+
+# my_email = '{}{}{}'.format(name,symbol,email) 
+# print(my_email) #rlaxodud7737@naver.com
+# print(f'{name}{symbol}{email}') #rlaxodud7737@naver.com
+
+## {List}
+ 
+# 문자열과 다르게 변경 가능
+# 객체의 메모리 주소 하나하나를 차례대로 저장
+# https://youtu.be/j8vXaGMJxQI?t=11885
+# [] 를 이용
+# 모든 객체를 넣을 수 있다.
+# in, float, str, list, dict, tuple, sets, None, bool, fucntions, methods
+
+# L = []
+# L = [1,2,3]
+# L = ['abcd',100,1.23]
+# L = [[1,2,3],[4,5,6],[7,8,9]]
+# L = [str.replace,list.append,print,len]
+# L[2]("this is print fucntion " + str(L[3](L))) #this is print fucntion 4
+
+# List Operation - 리스트연산
+# print([1,2,3]+[4,5,6]) #[1, 2, 3, 4, 5, 6]
+# print([1,2,3]*3) #[1, 2, 3, 1, 2, 3, 1, 2, 3]
+# print([1,2,3]+100) #error #서로 다른 객체
+
+# List in test
+# print(100 in [100,200,300]) #True
+# print([100,200] in [100,200,300]) #False
+
+# List indexing
+# L = [100,200,300,400]
+# print(L[0])
+# print(L[3])
+
+# List Slicing
+L = [100,200,300,400,500,600,700]
+print(L[1:3]) #[200,300]
+print(L[1:-1:2]) #[200, 400, 600]
