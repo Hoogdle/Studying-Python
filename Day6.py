@@ -127,7 +127,6 @@
 # [] == false => end
 # 2 == true => [] == false => end
 # [] == false => end
-
 # print(2 and 3) #3
 # print (3 and 2) #2
 # print([] and 2) #[]
@@ -135,3 +134,91 @@
 # print([] and '') #[]
 # false라면 and 종료, 마지막 객체 print
 
+# A = ((X and Y)or Z)
+# 만약 X와 Y 모두 true 라면 A == Y
+# 만약 X False A== Z
+# 위의 식과 동일
+# if X:
+    # A=Y
+# else:
+    # A=Z
+# A = Y if X else Z # X true, A==Y. X false, A==Z.
+
+ 
+## {While Loop}
+# 가장 위의 문구가 True일 동안 반복적으로 밑에 문구들을 실행
+# 위 조건이 Fals가 되면 Loop 에서 나감.
+
+# Infiinet Loop (무한 루프)
+
+# while True:
+#     print('무한루프 진입')
+
+# x = '머신러닝'
+# while x:
+#     print(x)
+#     x = x[1:] #x에 새로운 문자열 대입
+# 머신러닝
+# 신러닝
+# 러닝
+# 닝
+# x가 비어있는 문자열 => flase => while문 종료
+
+# x = 5
+# while x:
+#     print(f'로켓발사 {x}초 전')
+#     x -= 1
+
+# a=0;b=5
+# while a<b:
+#     print(b)
+#     b-=1
+
+# break,continue,pass
+# break : 루프에서 바로 나감
+# continue : 루프 가장위로 올라감
+# pass : 아무것도 안 함 (==None), 보통 사용 X
+
+# pass
+# while True:
+#     pass
+
+# continue
+# x = 10
+# while x:
+#     x-=1
+#     if x%2!=0:
+#         continue
+#     print(x)
+# 8 6 4 2 0
+
+# 10을 포함하는 code
+# x = 10
+# while x:
+#     if x%2==0 : 
+#         print(x)
+#         x-=1
+#     else: x-=1
+# else:
+#     print(x)
+# 10 8 6 4 2 0
+
+# break
+# while 문과 else 문의 결합
+# while loop의 조건이 충족 안 됨 => else로 이동
+# input : 입력값 받아옴
+# a = 5
+# s_pw = 'secret'
+# while a:
+#     a-=1
+#     pw = input('What is your pw : ')
+#     if pw == s_pw:
+#         print('Your pw is correct.')
+#         break
+#     print(f'You have {a} tiems left to try')
+# else :
+#     print('failed to login')
+
+# while 문을 가능한 사용하지 않는게 좋다.
+# 속도, for loop > while loop
+# 가능한 for loop 사용
