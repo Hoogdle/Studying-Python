@@ -292,7 +292,7 @@
 # print(L.pop()) #바나나
 # print(L) #['나비', '소세지', '과일']
 
-#.insert(  ,  )
+#.insert(index,contents)
 # 해당 index를 뒤로 밀고 값 삽입.
 # return 값 없음, None
 # 매개변수 2개 필요
