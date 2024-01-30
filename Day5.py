@@ -21,7 +21,7 @@
 # print(D['hegiht']) #error
 
 # Dcitionary Method
-# Dictionary clas 객체 안에 존재
+# Dictionary class 객체 안에 존재
 # .keys(), .values(), .items()
 # return 값이 List 는 아님 => index 활용 X
 
