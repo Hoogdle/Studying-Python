@@ -8,8 +8,8 @@
 
 # Statements vs Expression
 # a = 1+2
-# 1+2 : 수식
-# a = 1+2 : 문구
+# 1+2 : 수식(Expression)
+# a = 1+2 : 문구(Statements)
 # Statements : 명령을 다룸
 # Expression : 객체를 다룸
 
@@ -109,7 +109,7 @@
 # and or
 
 # or : 왼쪽부터 탐색, true 가 나오면 pass
-# 2 or 3 3 or 2 [] or 2 [] or '' 
+# 2 or 3 / 3 or 2 / [] or 2 / [] or '' 
 # 2 == true => end
 # 3 == true => end
 # [] == false => 2 == true => end
