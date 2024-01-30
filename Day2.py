@@ -165,7 +165,7 @@
 # key address1 ==> key value ==> hash fucntion(in:value) ==> hash function(out:address2) ==> make instance with address2
 
 # 값을 가져올 때(with 'Hash Table')
-# key address1 ==> kevalue ==> hash table(in:value) ==> hash table(out:address2) ==> access to instance by address2
+# key address1 ==> key value ==> hash table(in:value) ==> hash table(out:address2) ==> access to instance by address2
 
 # Y = 'hobby' , X[Y] 접근
 # Y의 hobby와 X의 hobby의 메모리 주소가 다를 수 있다.
