@@ -218,7 +218,7 @@
 # print(list(a)) #[1, 2, 3, 4, 5]
 # print(list(b)) #['크', '래', '프', '트', '맨']
 #print(list(c)) #error #int은 불가!(반복불가능)
-# print([c]) #100
+# print([c]) #[100]
 
 # List는 수정 가능한 열 1
 # 1. 리스트 수정
