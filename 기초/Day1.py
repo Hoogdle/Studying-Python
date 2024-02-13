@@ -95,7 +95,7 @@
 # 여러가지 회로 : 사칙연산 회로,반복 회로, 건너뛰기 회로, 조건문 회로
 
 ## {Python 통역과정}
-# Python Script => Compiler => Byte Code(for VM) => Python VM => Machine Code (for CPU)
+# Python Script => Compiler => Byte Code(for VM) => Python VM => Bynary Code(기계어)
 
 ## {Python Interpreter}
 # 위 과정을 자동으로 수행

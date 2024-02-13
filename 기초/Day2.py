@@ -43,8 +43,8 @@
 # print(X.__class__) #<class 'int'>
 
 # Y = 400.1
-# print(type(Y)) #<class 'int'>
-# print(Y.__class__) #<class 'int'>
+# print(type(Y)) #<class 'float'>
+# print(Y.__class__) #<class 'float'>
 
 # Z = True
 # print(type(Z)) #<class 'bool'>
@@ -129,7 +129,7 @@
 
 # Dictionary 는 '열(sequence)' 가 아니다.
 # 객체들이 Random하게 저장됨.
-# 인덱스로 접근 X, Key로 접근
+# '인덱스'로 접근 X, 'Key'로 접근 O
 
 # X = {
 #     'age' : 30,
@@ -167,6 +167,11 @@
 # 값을 가져올 때(with 'Hash Table')
 # key address1 ==> key value ==> hash table(in:value) ==> hash table(out:address2) ==> access to instance by address2
 
+# ==> 따라서 key의 value 가 동일하면 안 된다.
+# x = 'hobby', y = 'hobby'
+# x와 y의 메모리 주소는 다르지만 둘의 value 값이 같다
+# 따라서 X[x], X[y] 는 동일한 주소를 가리킨다. (X는 dict)
+
 # Y = 'hobby' , X[Y] 접근
 # Y의 hobby와 X의 hobby의 메모리 주소가 다를 수 있다.
 # 하지만 메모리 주소의 '값'을 hash table에 넣는 것이기 때문에 상관 X
@@ -174,6 +179,8 @@
 
 ## {Tuples - 튜플}
 
+# "수정이 불가능한 객체"
+# "수정하려면 새로운 튜플 생성!"
 # 괄호 () 안에 객체들을 왼쪽 => 오른쪽으로 모아 놓은 객체
 # (1,2,3,4,5)
 # ([1,2,3],(4,5),{'이름' : '크래프트맨','나이' : 30},'하이 헬로 안녕')
@@ -181,7 +188,7 @@
 # 리스트 수정 O , 튜플 수정 X
 # 수정하려면 새로운 튜플 생성해야 함.
 
-# 객체가 1개 -> , 필수
+# 객체가 1개 -> ", 필수"
 # X = ('안녕하세요',) 
 # print(isinstance(X,tuple)) #X는 tuple의 객체? #True
 # print(type(X)) #X의 클래스? #<class 'tuple'>
@@ -191,12 +198,15 @@
 # X = ([1,2,3],(4,5),{'이름' : '크래프트맨','나이' : 30},'하이 헬로')
 # print(X[0]) #[1, 2, 3]
 # print(X[2]['이름']) #크래프트맨
+# print(X[2]) #{'이름': '크래프트맨', '나이': 30}
 # print(len(X)) #4
 
 
 ## {Sets - 세트}
 
-# 중괄호 {} 안에 객체들을 랜덤 순서대로 모아 놓은 객체
+# 수정 불가한 객체!
+# 중복 불가한 객체!
+# 중괄호 {} 안에 객체들을 '랜덤 순서대'로 모아 놓은 객체
 # {1,2,3,4,5}
 # 객체의 중복 불가
 # 수정 불가

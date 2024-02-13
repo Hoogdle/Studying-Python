@@ -31,6 +31,8 @@
 
 # X = 2023
 # Y = X
+# print(id(X)) #3027983055504
+# print(id(Y)) #3027983055504
 # print(hex(id(X))) #0x238d523a0b0
 # print(hex(id(Y))) #0x238d523a0b0
 # print(X is Y)  #True #is 는 '메모리 주소'를 비교할 때 사용
@@ -45,6 +47,29 @@
 # 2023's count == 0
 # Counter == 0 
 # ==> Garbage Collector가 잡아먹음
+
+
+# Mutable vs Immutable
+# 수정 O : List, Dictionary(key는 수정불가)
+# 수정 X : Numbers, Str, Tuple, Set
+# Mutable 객체 : 각각 다른 메모리에 저장됨
+# Immutable 객체 : 값이 같다면 동일한 메모리에 저장
+
+# X = 'hello'
+# Y = 'hello'
+# print(X is Y) #True
+
+# X = (100,200,300)
+# Y = (100,200,300)
+# print(X is Y) #True
+
+# X = {'kim':300}
+# Y = {'kim':300}
+# print(X is Y) #False
+
+# X = [100,200,300]
+# Y = [100,200,300]
+# print(X is Y) #False
 
 ## Quiz
 
@@ -90,6 +115,8 @@
 # list2 와 list instance 연결
 # list intstance count == 2 #list1과 list2가 가리키고 있음
 # int instance 를 가리키는 list instance는 여전히 하나이므로 int instance coutner == 1
+# list1 list2 같은 변수는 list객체의 카운터 up
+# list 안의 객체들의 카운터를 늘리는 것은 그 객체들을 감싸는 []가 생성되면 늘려진다.
 
 # list1[0] = 1000
 # int instance 1000 생성
@@ -119,8 +146,8 @@
 # list2 == list3 # 값이 같은가?
 # list2 is list3 # 같은 객체인가? #메모리 주소가 같은가?
 
-# class로 instance를 만드는 것은 새로운 객체를 생성한다는 것.
-# 새로운 객체를 생성한다는 것은 서로 다른 메모리 공간에 저장된다는 것.
+# 'class'로 'instance'를 만드는 것은 '새로운 객체를 생성'한다는 것.
+# '새로운 객체'를 생성한다는 것은 '서로 다른 메모리 공간'에 저장된다는 것.
 
 # x = [100,200,300]
 # y = x
@@ -167,12 +194,15 @@
 # print(5%2) #1
 # print(5//-2) #-3 #-2 and -1/2 ==> -3~-2's min ==> -3
 # print((3+3)*2**2-23) #1
+# // 은 value 가 b라면 a<b<c 중 a의 값으로, 즉 가장 min한 값으로!
 
 # 비교
+# number는 free하게 비교 가능
+# int와 float형도 비교 가능!
 # >, <, >=, <=, ==, !=, and, or
 # print(3>3) #False
 # print(3>=3) #True
-# print(2.1>2) #True #int과 float도 비교 가능하다!
+# print(2.1>2) #True #'int과 float도 비교' 가능하다!
 # print(5 == 5.0) #True
 # print(5 != 4) #True
 
@@ -180,6 +210,9 @@
 # y=3
 # z=4
 
+# c언어 처럼 %% || 를 쓰지 않는다.
+# and or 로 논리연산
+# a<b<c 같은 연속 연산도 가능
 # print(x<y and y>z) #False
 # print(x<y or y>z) #True
 # print(1<2<3.0<4) #and 생략 #==1<2 and 2<3.0 and 3.0<4
