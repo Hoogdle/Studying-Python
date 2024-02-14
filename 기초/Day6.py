@@ -98,7 +98,7 @@
 # if 1: print('true') #true
 # if 100 : print('true') #true
 # if 'spam' : print('true') #true
-# if [100,200,300] : print('true') 
+# if [100,200,300] : print('true') #true
 
 # if 0 : print('true') #
 # if 0 : print('true') #
@@ -147,7 +147,7 @@
  
 ## {While Loop}
 # 가장 위의 문구가 True일 동안 반복적으로 밑에 문구들을 실행
-# 위 조건이 Fals가 되면 Loop 에서 나감.
+# 위 조건이 False가 되면 Loop 에서 나감.
 
 # Infiinet Loop (무한 루프)
 
