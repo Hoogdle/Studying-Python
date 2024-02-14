@@ -131,7 +131,8 @@
 # https://youtu.be/j8vXaGMJxQI?t=11143
 
 # replace()
-# 새로운 instance가 생성됨.
+# replace(basis value,edited value)
+# "새로운 instance가 생성"됨.
 # S = '가나다라마바사'
 # S = S.replace('가','케') #가 => 케
 # print(S) #케나다라마바사
@@ -140,22 +141,27 @@
 ## {String Method}
 
 # replace(), upper(), lower(), count(), index()...
-# String Method로 새로운 String instance가 만들어짐
+# String Method로 '새로운 String instance'가 만들어짐
 
 # .join()
+# list items들을 결합 시킴
+# list -> str
 # l = ['안녕','내','이름은','크래프트맨','멘탈리티야']
 # s1 = '@'.join(l)
 # print(s1) # 안녕@내@이름은@크래프트맨@멘탈리티야
             # 리스트의 객체들을 각각 join 이때 ''안에 내용을 넣어줌
 
 # .replace()
+# str의 내용을 수정, 특정 단어 수정
 # email1 = 'craftsmanmnetality@gmail.com'
 # email2 = email1.replace('gmail','naver')
 # print(email1) #craftsmanmnetality@gmail.com
 # print(email2) #craftsmanmnetality@naver.com
 
 # .split()
+# join() 과 split()은 역관계
 # 리스트 형태로 나눠짐
+# str -> list
 # email1 = 'crfatsmanmnetality@gmail.com'
 # email2 = email1.split('@')
 # print(email1) #crfatsmanmnetality@gmail.com
@@ -180,7 +186,7 @@
 # 객체의 메모리 주소 하나하나를 차례대로 저장
 # https://youtu.be/j8vXaGMJxQI?t=11885
 # [] 를 이용
-# 모든 객체를 넣을 수 있다.
+# '모든 객체'를 넣을 수 있다.
 # in, float, str, list, dict, tuple, sets, None, bool, fucntions, methods
 
 # L = []
@@ -218,7 +224,7 @@
 # c = 100
 # print(list(a)) #[1, 2, 3, 4, 5]
 # print(list(b)) #['크', '래', '프', '트', '맨']
-#print(list(c)) #error #int은 불가!(반복불가능)
+# print(list(c)) #error #int은 불가!(반복불가능)
 # print([c]) #[100]
 
 # List는 수정 가능한 열 1
@@ -228,6 +234,7 @@
 # L[0] = '케'
 # https://youtu.be/j8vXaGMJxQI?t=12849
 # print(L) #['케', '나', '다', '라', '마', '바', '사']
+
 # 2. 새로운 리스트
 # L = list('가나다라마바사')
 # L = ['케']+L[1:]
