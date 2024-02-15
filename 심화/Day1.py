@@ -203,7 +203,7 @@
 #     def inner():
 #         nonlocal name
 #         name = name + 'Tae'
-#         print('inner',name) #inner Tae
+#         print('inner',name) #inner KimTae
 #     return inner
 # A = outer() 
 # A() 
@@ -299,15 +299,15 @@
 # List는 수정가능한 객체이므로 nonlocal을 사용하지 않아도 됨
 # 변수 name 자체, 참조하는 리스트는 변경되지 않음
 # 단지 리스트 첫 번째 index의 '내용'만 변경
-def outer(start):
-    name = [start]
-    print('outer',name)
+# def outer(start):
+#     name = [start]
+#     print('outer',name)
 
-    def inner():
-        name[0] = name[0] + 'tae'
-        print('inner',name[0])
-    return inner
-A = outer('Kim') #outer ['Kim']
-B = outer('Yeong') #outer ['Yeong']
-A() #inner Kimtae
-B() #inner Yeongtae
+#     def inner():
+#         name[0] = name[0] + 'tae'
+#         print('inner',name[0])
+#     return inner
+# A = outer('Kim') #outer ['Kim']
+# B = outer('Yeong') #outer ['Yeong']
+# A() #inner Kimtae
+# B() #inner Yeongtae
