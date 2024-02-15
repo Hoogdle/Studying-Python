@@ -206,7 +206,7 @@
 #         print('inner',name) #inner KimTae
 #     return inner
 # A = outer() 
-# A() 
+# A()  
 # outer Kim
 # inner KimTae
 # outer 함수 종료 후 name 변수가 삭제되어야 할텐데..?
