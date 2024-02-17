@@ -254,6 +254,7 @@
 
 #.append()
 # in-place replacement ('수정' 하는 메소드, return 값이 없음(None))
+# 하나의 값만 추가 가능, 두 개 이상 => extend
 # L = ['안녕','헬로우']
 # L.append('반가워')
 # print(L) #['안녕', '헬로우', '반가워']
