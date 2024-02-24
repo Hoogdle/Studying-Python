@@ -155,27 +155,34 @@
 ## {Dictionaries 작동원리}
 
 # with 'Hash Table'
-# 1. 'key' 에 해당하는 메모리 주소를 저장
-# 2. 'key' 메모리 주소에 접근
-# 3. 해당 값의 value 를 'Hash function' 에 input
-# 4. 해당 value 에 해당하는 '특정 주소'를 output
-# 5. 그 메모리 주소에 value 객체 생성
+# *** dictionary는 'key의 메모리주소'와 'value의 메모리주소'를 저장
+# 1. 'key' 메모리 주소에 접근하여 key 값을 가져옴
+# 2. key값을 Hash 함수의 input, output으로 특정 메모리 주소 생성
+# 3. output 메모리주소에 value 객체 생성
 
 # 값을 저장할 때
-# key address1 ==> key value ==> hash fucntion(in:value) ==> hash function(out:address2) ==> make instance with address2
+# key address 접근 => key 값 get => hash(key) = address => address에 value 객체 생성
 
-# 값을 가져올 때(with 'Hash Table')
-# key address1 ==> key value ==> hash table(in:value) ==> hash table(out:address2) ==> access to instance by address2
+# 값을 가져올 때
+# key address 접근 => key 값 get => hash(key) = address => address에 접근 value 가져오기
 
-# ==> 따라서 key의 value 가 동일하면 안 된다.
-# x = 'hobby', y = 'hobby'
-# x와 y의 메모리 주소는 다르지만 둘의 value 값이 같다
-# 따라서 X[x], X[y] 는 동일한 주소를 가리킨다. (X는 dict)
+# key 값은 동일 하지만 주소가 다를 수도 있다.
+# 하지만 Hash 함수에 들어가는 것은 'key의 값'이기 때문에 주소가 달라도 상관없다.
 
-# Y = 'hobby' , X[Y] 접근
-# Y의 hobby와 X의 hobby의 메모리 주소가 다를 수 있다.
-# 하지만 메모리 주소의 '값'을 hash table에 넣는 것이기 때문에 상관 X
-# 어떤 '객체의 값'을 집어 넣는 것이 중요하다.
+# ***
+# key값이 다르다면 서로 다른 해쉬 값을 내뱉게 된다. 일반적으로 해쉬 값이 다르면 메모리 주소도 다르다.
+# 하지만 파이썬에서는 메모리 최적화를 위해 immutable 데이터 타입이면 동일한 메모리 주소를 가리키게 한다.
+# ***
+
+# d = {1:'a',2:'a'}
+# print(d[1] is d[2]) #True #immutable -> 메모리 최적화 동일한 주소
+
+# d = {1:[1],2:[1]}
+# print(d[1] is d[2]) #False #mutable -> 다른 메모리 주소
+
+
+
+
 
 ## {Tuples - 튜플}
 
